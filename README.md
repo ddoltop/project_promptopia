@@ -46,3 +46,4 @@ NEXTAUTH_SECRET make terminal openssl rand -base64 32
   - Search by username
 [] Implement Click on tag
 [] Implement View other profiles
+

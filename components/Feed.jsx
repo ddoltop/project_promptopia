@@ -27,8 +27,8 @@ const Feed = () => {
   const [searchTimeout, setSearchTimeout] = useState(null);
   const [searchResults, setSearchResults] = useState([]);
 
-  const [posts, setPosts] = useState([]);
-  const {data: session} = useSession();
+  // const [posts, setPosts] = useState([]);
+  // const {data: session} = useSession();
   // console.log('Feed called>>>>>>>>>>>>>', session);
 
 
@@ -42,7 +42,6 @@ const Feed = () => {
 
   useEffect(() => {
     fetchPosts();
-
   },[])
 
   const filterPrompts = (text) => {
