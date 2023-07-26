@@ -12,9 +12,7 @@ export const GET = async (req) => {
     return new Response(JSON.stringify(prompts), {
       status: 200,
       headers: {
-        'Cache-Control': 'public, s-maxage=1',
-        'CDN-Cache-Control': 'public, s-maxage=60',
-        'Vercel-CDN-Cache-Control': 'public, s-maxage=3600',
+        'Cache-Control': 'private, no-store'
       },
     });
   } catch (error) {
