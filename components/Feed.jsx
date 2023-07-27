@@ -34,10 +34,10 @@ const Feed = () => {
 
   const fetchPosts = async () => {
     const response = await fetch('api/prompt',{cache: 'no-store'});
-    const data = await response.json();
     if(response.status !== 200) {
-        console.log('api/prompt Error >>>>>>>>>>>>>', data);
+      console.log('api/prompt Error >>>>>>>>>>>>>', response);
     } else {
+      const data = await response.json();
       setAllPosts(data);
       setSearchResults(data);
       console.log('Feed useEffect called>>>>>>>>>>>>>', data.length);
