@@ -1,4 +1,5 @@
 import mongoose, {Schema, model, models} from "mongoose";
+const User = require('./user');
 
 const PromptSchema = new Schema({
   creator: {

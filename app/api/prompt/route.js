@@ -1,4 +1,5 @@
 import { connectDB } from "@utils/database";
+
 import Prompt from "@models/prompt";
 
 export const dynamic = 'force-dynamic';
