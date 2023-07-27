@@ -18,6 +18,6 @@ export const GET = async (req) => {
     });
   } catch (error) {
     console.log(error);
-    return new Response("Failed to fetch prompts", { status: 500 });
+    return new Response(JSON.stringify(error), { status: 500 });
   }
 };

@@ -35,9 +35,13 @@ const Feed = () => {
   const fetchPosts = async () => {
     const response = await fetch('api/prompt',{cache: 'no-store'});
     const data = await response.json();
-    setAllPosts(data);
-    setSearchResults(data);
-    console.log('Feed useEffect called>>>>>>>>>>>>>', data.length);
+    if(response.status !== 200) {
+        console.log('api/prompt Error >>>>>>>>>>>>>', data);
+    } else {
+      setAllPosts(data);
+      setSearchResults(data);
+      console.log('Feed useEffect called>>>>>>>>>>>>>', data.length);
+    }
   }
 
   useEffect(() => {
